@@ -1,0 +1,18 @@
+{
+  "name": "webdriver_demo",
+  "version": "0.0.0",
+  "description": "This is a basic browser test using webdriverIO and mocha chai.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/webdriverio/bin/wdio wdio.conf.js"
+  },
+  "author": "Gary Moon <gary.il.moon@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "chai": "3.2.0",
+    "mocha": "2.2.5",
+    "q": "1.4.1",
+    "selenium-standalone": "4.5.3",
+    "webdriverio": "3.2.5"
+  }
+}
