@@ -19,6 +19,12 @@ Check out `tests/simpleTest.js` to get a basic idea of how to write a test.
 
 Add any tests to the `tests/` directory, and they will be automatically run with the command `$ npm test`.
 
+## CSS Testing
+
+Check out [WebdriverCSS](https://github.com/webdriverio/webdrivercss) for automated visual testing. To enable, go to `wdio.conf.js` and check the plugins section.
+
+**NOTE**: As of Nov 10, 2015, WebdriverCSS is not supported for WebdriverIO v3.0 (and this demo uses v3.15). However, support should be coming soon! 
+
 ## Resources
 
 Google is your biggest friend when searching for help!
