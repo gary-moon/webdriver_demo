@@ -8,7 +8,7 @@ Note that most of the initial setup has been done for you, so you can get straig
 
 1. Install [git](https://git-scm.com/documentation): `$ brew install git`
 2. Install [node.js](https://nodejs.org/en/docs/): `$ brew install node`
-3. Clone this repository: `$ git clone git@github.com:reachlocal/webdriverio_demo.git`
+3. Clone this repository: `$ git clone git@github.com:gary-moon/webdriverio_demo.git`
   - You may need to include an SSH key to your github account. Read [here](https://help.github.com/articles/generating-ssh-keys/) to learn how.
 4. Install the dependencies listed in [package.json](./package.json): `$ npm install`
 5. Run your test: `$ npm test`
