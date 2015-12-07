@@ -1,6 +1,3 @@
-var q = require('q');
-var selenium = require('selenium-standalone');
-
 exports.config = {
 
     //
@@ -108,48 +105,7 @@ exports.config = {
     //
     // Gets executed before all workers get launched.
     onPrepare: function() {
-      var deferred = q.defer();
 
-      selenium.install({
-        version: '2.48.0',
-        baseURL: 'http://selenium-release.storage.googleapis.com',
-        drivers: {
-          chrome: {
-            // check for more recent versions of chrome driver here:
-            // http://chromedriver.storage.googleapis.com/index.html
-            version: '2.17',
-            arch: process.arch,
-            baseURL: 'http://chromedriver.storage.googleapis.com'
-          },
-          ie: {
-            // check for more recent versions of internet explorer driver here:
-            // http://selenium-release.storage.googleapis.com/index.html
-            version: '2.48.0',
-            arch: process.arch,
-            baseURL: 'http://selenium-release.storage.googleapis.com'
-          }
-        },
-        logger: function (message) {
-          console.log(message);
-        }
-      }, function(err) {
-        if (err) {
-          deferred.reject(err);
-        }
-
-        selenium.start({
-          version: '2.48.0'
-        }, function(err, child) {
-          if (err) {
-            deferred.reject(err);
-          }
-
-          selenium.child = child;
-          deferred.resolve();
-        });
-      });
-
-      return deferred.promise;
     },
     //
     // Gets executed before test execution begins. At this point you will have access to all global
@@ -167,6 +123,6 @@ exports.config = {
     // Gets executed after all workers got shut down and the process is about to exit. It is not
     // possible to defer the end of the process using a promise.
     onComplete: function() {
-      selenium.child.kill();
+
     }
 };
