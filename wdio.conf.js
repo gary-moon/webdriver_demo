@@ -128,9 +128,6 @@ exports.config = {
             arch: process.arch,
             baseURL: 'http://selenium-release.storage.googleapis.com'
           }
-        },
-        logger: function (message) {
-          console.log(message);
         }
       }, function(err) {
         if (err) {
